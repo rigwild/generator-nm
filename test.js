@@ -12,6 +12,20 @@ test.beforeEach(async () => {
 	generator = helpers.createGenerator('nm:app', ['../app'], null, {skipInstall: true});
 });
 
+const commonFiles = [
+	'.git',
+	'.prettierrc.js',
+	'.gitattributes',
+	'.gitignore',
+	'.travis.yml',
+	'LICENSE',
+	'package.json',
+	'README.md',
+	'test',
+	'tsconfig.json',
+	'screenshot.png'
+];
+
 test.serial('generates expected files', async () => {
 	helpers.mockPrompt(generator, {
 		moduleName: 'test',
@@ -22,21 +36,12 @@ test.serial('generates expected files', async () => {
 
 	await pify(generator.run.bind(generator))();
 
-	assert.file([
-		'.editorconfig',
-		'.git',
-		'.gitattributes',
-		'.gitignore',
-		'.travis.yml',
-		'index.js',
-		'license',
-		'package.json',
-		'readme.md',
-		'test.js',
-		'.npmrc'
-	]);
+	assert.file(['index.ts', ...commonFiles]);
+	assert.noFile('cli.ts');
 
-	assert.noFile('cli.js');
+	assert.fileContent('package.json', /"main": "dist\/index\.js"/);
+	assert.fileContent('package.json', /"types": "dist\/index\.d\.ts"/);
+
 });
 
 test.serial('CLI option', async () => {
@@ -49,54 +54,15 @@ test.serial('CLI option', async () => {
 
 	await pify(generator.run.bind(generator))();
 
-	assert.file('cli.js');
+	assert.file(['cli.ts', ...commonFiles]);
+	assert.noFile('index.ts');
+
 	assert.fileContent('package.json', /"bin":/);
-	assert.fileContent('package.json', /"bin": "cli.js"/);
+	assert.fileContent('package.json', /"test": "dist\/cli\.js"/);
 	assert.fileContent('package.json', /"meow"/);
-});
-
-test.serial('nyc option', async () => {
-	helpers.mockPrompt(generator, {
-		moduleName: 'test',
-		githubUsername: 'test',
-		website: 'test.com',
-		cli: false,
-		nyc: true,
-		codecov: false
-	});
-
-	await pify(generator.run.bind(generator))();
-
-	assert.noFile('cli.js');
-	assert.fileContent('.gitignore', /\.nyc_output/);
-	assert.fileContent('.gitignore', /coverage/);
-	assert.fileContent('package.json', /"xo && nyc ava"/);
-	assert.fileContent('package.json', /"nyc": "/);
-	assert.noFileContent('package.json', /"codecov":/);
-	assert.noFileContent('package.json', /"lcov"/);
-	assert.noFileContent('.travis.yml', /codecov/);
-});
-
-test.serial('codecov option', async () => {
-	helpers.mockPrompt(generator, {
-		moduleName: 'test',
-		githubUsername: 'test',
-		website: 'test.com',
-		cli: false,
-		nyc: true,
-		codecov: true
-	});
-
-	await pify(generator.run.bind(generator))();
-
-	assert.noFile('cli.js');
-	assert.fileContent('.gitignore', /\.nyc_output/);
-	assert.fileContent('.gitignore', /coverage/);
-	assert.fileContent('package.json', /"xo && nyc ava"/);
-	assert.fileContent('package.json', /"nyc": "/);
-	assert.fileContent('package.json', /"codecov":/);
-	assert.fileContent('package.json', /"lcov"/);
-	assert.fileContent('.travis.yml', /codecov/);
+	assert.fileContent('package.json', /"execa"/);
+	assert.fileContent('package.json', /"update-notifier"/);
+	assert.fileContent('package.json', /"\@types\/update-notifier"/);
 });
 
 test('parse scoped package names', t => {
@@ -111,9 +77,7 @@ test.serial('prompts for description', async () => {
 		moduleDescription: 'foo',
 		githubUsername: 'test',
 		website: 'test.com',
-		cli: false,
-		nyc: true,
-		codecov: true
+		cli: false
 	});
 
 	await pify(generator.run.bind(generator))();
@@ -135,5 +99,5 @@ test.serial('defaults to superb description', async () => {
 	await pify(generator.run.bind(generator))();
 
 	assert.fileContent('package.json', /"description": "My .+ module",/);
-	assert.fileContent('readme.md', /> My .+ module/);
+	assert.fileContent('README.md', /> My .+ module/);
 });

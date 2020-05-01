@@ -83,6 +83,7 @@ module.exports = class extends Generator {
       if (!cli) this.fs.copyTpl(this.templatePath('index.ts'), this.destinationPath('index.ts'), tpl)
       if (cli) this.fs.copyTpl(this.templatePath('cli.ts'), this.destinationPath('cli.ts'), tpl)
 
+      mv('prettierrc.js', '.prettierrc.js')
       mv('gitattributes', '.gitattributes')
       mv('gitignore', '.gitignore')
       mv('travis.yml', '.travis.yml')
