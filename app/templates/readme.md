@@ -1,5 +1,5 @@
 # <%= repoName %>
-[![Build Status](https://travis-ci.com/rigwild/<%= repoName %>.svg?branch=master)](https://travis-ci.com/rigwild/<%= repoName %>) [![npm package](https://img.shields.io/npm/v/<%= moduleName %>.svg?logo=npm)](https://www.npmjs.com/package/<%= moduleName %>) ![npm downloads](https://img.shields.io/npm/dw/<%= moduleName %>) ![license](https://img.shields.io/npm/l/<%= moduleName %>?color=blue)
+[![Build Status](https://travis-ci.com/<%= githubUsername %>/<%= repoName %>.svg?branch=master)](https://travis-ci.com/<%= githubUsername %>/<%= repoName %>) [![npm package](https://img.shields.io/npm/v/<%= moduleName %>.svg?logo=npm)](https://www.npmjs.com/package/<%= moduleName %>) ![npm downloads](https://img.shields.io/npm/dw/<%= moduleName %>) ![license](https://img.shields.io/npm/l/<%= moduleName %>?color=blue)
 
 > <%= moduleDescription %>
 
@@ -66,14 +66,14 @@ $ <%= repoName %> --help
     $ <%= moduleName.replace('-cli', '') %>
     $ <%= moduleName.replace('-cli', '') %> --file="_arkWallets.txt"
 
-  https://github.com/rigwild/<%= moduleName %>
+  https://github.com/<%= githubUsername %>/<%= moduleName %>
 ```<% } %>
 
 
 ## Related
 
-<% if (cli) { %> - [<%= moduleName.replace('-cli', '') %>](https://github.com/rigwild/<%= moduleName.replace('-cli', '') %>) - API for this module
-<%} if (!cli) { %> - [<%= `${moduleName}-cli` %>](https://github.com/rigwild/<%= `${moduleName}-cli` %>) - CLI for this module <% } %>
+<% if (cli) { %> - [<%= moduleName.replace('-cli', '') %>](https://github.com/<%= githubUsername %>/<%= moduleName.replace('-cli', '') %>) - API for this module
+<%} if (!cli) { %> - [<%= `${moduleName}-cli` %>](https://github.com/<%= githubUsername %>/<%= `${moduleName}-cli` %>) - CLI for this module <% } %>
 
 
 ## License

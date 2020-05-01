@@ -3,11 +3,11 @@
 	"version": "0.1.0",
 	"description": "<%= moduleDescription %>",
 	"license": "MIT",
-	"repository": "rigwild/<%= repoName %>",
+	"repository": "<%= githubUsername %>/<%= repoName %>",
 	"author": {
-		"name": "rigwild",
-		"email": "me@rigwild.dev",
-		"url": "https://rigwild.dev"
+		"name": "<%= name %>",
+		"email": "<%= email %>",
+		"url": "<%= humanizedWebsite %>"
 	},<% if (!cli) { %>
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",<% } if (cli) { %>

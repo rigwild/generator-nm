@@ -18,7 +18,7 @@ const cli = meow(
       $ <%= moduleName.replace('-cli', '') %>
       $ <%= moduleName.replace('-cli', '') %> --file="_arkWallets.txt"
 
-		https://github.com/rigwild/<%= moduleName %>
+		https://github.com/<%= githubUsername %>/<%= moduleName %>
 `,
   {
     flags: {

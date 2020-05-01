@@ -2,9 +2,10 @@
 
 > Scaffold out a [node module](https://github.com/sindresorhus/node-module-boilerplate)
 
-Features and differences of this fork:
+![screenshot](screenshot.png)
 
- - Don't ask for my name/email/website (**change it if you're not me** mdr)
+Features and differences of this fork ([original generator `nm`](https://github.com/sindresorhus/generator-nm)):
+
  - **Fully reworked to TypeScript (AVA + TypeScript + ts-node)**
  - Use **Yarn**
  - Generate **a module OR a CLI (not both merged)**
@@ -16,9 +17,9 @@ Features and differences of this fork:
  - Added README screenshot
  - Made LICENSE and README uppercase
  - Travis Node.js latest version
- - CLI mode add `update-notifier`
- - CLI mode add `update-notifier`
- - Removed private GitHub orgs
+ - CLI mode add [`update-notifier`](https://github.com/yeoman/update-notifier)
+ - CLI mode GitHub repo link in help message
+ - CLI mode import package having package name without `-cli` and show it in the README `Related` section
  - Removed .editorconfig/.npmrc
  - Removed xo/nyc/codecov
 
@@ -52,7 +53,8 @@ $ yo nm-typescript --help
 
   Options:
     --help          # Print the generator's options and usage
+    --cli           # Make a CLI
+    --no-cli        # Make a module
     --skip-cache    # Do not remember prompt answers                      Default: false
     --skip-install  # Do not automatically install dependencies           Default: false
-    --cli           # Add a CLI
 ```
