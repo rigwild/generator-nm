@@ -1,18 +1,36 @@
-# generator-nm [![Build Status](https://travis-ci.org/sindresorhus/generator-nm.svg?branch=master)](https://travis-ci.org/sindresorhus/generator-nm)
+# generator-nm-typescript [![Build Status](https://travis-ci.org/rigwild/generator-nm-typescript.svg?branch=master)](https://travis-ci.org/rigwild/generator-nm-typescript)
 
 > Scaffold out a [node module](https://github.com/sindresorhus/node-module-boilerplate)
 
-Optionally with a [CLI](http://en.wikipedia.org/wiki/Command-line_interface).
+Features and differences of this fork:
 
-This is what I use for [my own modules](https://www.npmjs.com/~sindresorhus).
+ - Don't ask for my name/email/website (**change it if you're not me** mdr)
+ - **Fully reworked to TypeScript (AVA + TypeScript + ts-node)**
+ - Use **Yarn**
+ - Generate **a module OR a CLI (not both merged)**
+ - Keep Yarn lock files
+ - package.json engine to node >=10
+ - Added Prettier configuration
+ - Added lots of badges at the top of the README
+ - Added `Related` section at the end of the README
+ - Added README screenshot
+ - Made LICENSE and README uppercase
+ - Travis Node.js latest version
+ - CLI mode add `update-notifier`
+ - CLI mode add `update-notifier`
+ - Removed private GitHub orgs
+ - Removed .editorconfig/.npmrc
+ - Removed xo/nyc/codecov
 
-![](screenshot.png)
+## Generation examples
 
+ - [Module generation example](./examples/module)
+ - [CLI generation example](./examples/cli)
 
 ## Install
 
 ```
-$ npm install --global yo generator-nm
+$ yarn global add yo generator-nm-typescript
 ```
 
 
@@ -21,30 +39,20 @@ $ npm install --global yo generator-nm
 With [yo](https://github.com/yeoman/yo):
 
 ```
-$ yo nm
+$ yo nm-typescript
 ```
 
 There are multiple command-line options available:
 
 ```
-$ yo nm --help
+$ yo nm-typescript --help
 
   Usage:
-    yo nm [options]
+    yo nm-typescript [options]
 
   Options:
     --help          # Print the generator's options and usage
     --skip-cache    # Do not remember prompt answers                      Default: false
     --skip-install  # Do not automatically install dependencies           Default: false
-    --org           # Publish to a GitHub organization account
     --cli           # Add a CLI
-    --coverage      # Add code coverage with nyc
-    --codecov       # Upload coverage to codecov.io (implies --coverage)
 ```
-
-The `--org` option takes a string value (i.e. `--org=avajs`). All others are boolean flags and can be negated with the `no` prefix (i.e. `--no-codecov`). You will be prompted for any options not passed on the command-line.
-
-
-## Tip
-
-Use [chalk](https://github.com/sindresorhus/chalk) if you want colors in your CLI.

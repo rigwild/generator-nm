@@ -1,21 +1,24 @@
-# <%= repoName %> [![Build Status](https://travis-ci.com/<%= githubUsername %>/<%= repoName %>.svg?branch=master)](https://travis-ci.com/<%= githubUsername %>/<%= repoName %>)<% if (codecov) { %> [![codecov](https://codecov.io/gh/<%= githubUsername %>/<%= repoName %>/badge.svg?branch=master)](https://codecov.io/gh/<%= githubUsername %>/<%= repoName %>?branch=master)<% } %>
+# <%= repoName %>
+[![Build Status](https://travis-ci.com/rigwild/<%= repoName %>.svg?branch=master)](https://travis-ci.com/rigwild/<%= repoName %>) [![npm package](https://img.shields.io/npm/v/<%= moduleName %>.svg?logo=npm)](https://www.npmjs.com/package/<%= moduleName %>) ![npm downloads](https://img.shields.io/npm/dw/<%= moduleName %>) ![license](https://img.shields.io/npm/l/<%= moduleName %>?color=blue)
 
 > <%= moduleDescription %>
+
+![Screenshot](./screenshot.png)<% if (!cli) { %>
 
 
 ## Install
 
 ```
-$ npm install <%= moduleName %>
+$ yarn add <%= moduleName %>
 ```
 
 
 ## Usage
 
 ```js
-const <%= camelModuleName %> = require('<%= moduleName %>');
+import <%= camelModuleName %> from '<%= moduleName %>'
 
-<%= camelModuleName %>('unicorns');
+await <%= camelModuleName %>('unicorns')
 //=> 'unicorns & rainbows'
 ```
 
@@ -39,27 +42,40 @@ Type: `object`
 Type: `boolean`\
 Default: `false`
 
-Lorem ipsum.<% if (cli) { %>
+Lorem ipsum.<% } if (cli) { %>
 
 
-## CLI
+## Install
 
 ```
-$ npm install --global <%= moduleName %>
+$ yarn global add <%= moduleName %>
 ```
+
+## Usage
 
 ```
 $ <%= repoName %> --help
 
   Usage
-    <%= repoName %> [input]
-
+    $ <%= moduleName.replace('-cli', '') %>
+  
   Options
-    --foo  Lorem ipsum [Default: false]
+    --file -f         Output file [Default: "myFile.json"]
 
   Examples
-    $ <%= repoName %>
-    unicorns & rainbows
-    $ <%= repoName %> ponies
-    ponies & rainbows
+    $ <%= moduleName.replace('-cli', '') %>
+    $ <%= moduleName.replace('-cli', '') %> --file="_arkWallets.txt"
+
+  https://github.com/rigwild/<%= moduleName %>
 ```<% } %>
+
+
+## Related
+
+<% if (cli) { %> - [<%= moduleName.replace('-cli', '') %>](https://github.com/rigwild/<%= moduleName.replace('-cli', '') %>) - API for this module
+<%} if (!cli) { %> - [<%= `${moduleName}-cli` %>](https://github.com/rigwild/<%= `${moduleName}-cli` %>) - CLI for this module <% } %>
+
+
+## License
+
+[The MIT license](./LICENSE)

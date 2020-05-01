@@ -1,57 +1,57 @@
 {
-	"name": "generator-nm",
-	"version": "5.1.1",
-	"description": "Scaffold out a node module",
-	"license": "MIT",
-	"repository": "sindresorhus/generator-nm",
-	"author": {
-		"name": "Sindre Sorhus",
-		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
-	},
-	"engines": {
-		"node": ">=8"
-	},
-	"scripts": {
-		"test": "xo && ava test.js"
-	},
-	"files": [
-		"app"
-	],
-	"keywords": [
-		"yeoman-generator",
-		"plugin",
-		"boilerplate",
-		"template",
-		"scaffold",
-		"node",
-		"module",
-		"node_module",
-		"node-module",
-		"init",
-		"sindre"
-	],
-	"dependencies": {
-		"humanize-url": "^2.1.0",
-		"is-scoped": "^2.1.0",
-		"normalize-url": "^4.3.0",
-		"superb": "^4.0.0",
-		"underscore.string": "^3.0.3",
-		"yeoman-generator": "^4.0.1"
-	},
-	"devDependencies": {
-		"ava": "^2.1.0",
-		"pify": "^4.0.1",
-		"xo": "^0.24.0",
-		"yeoman-assert": "^3.0.0",
-		"yeoman-test": "^2.0.0"
-	},
-	"ava": {
-		"failWithoutAssertions": false
-	},
-	"xo": {
-		"ignores": [
-			"app/templates/**"
-		]
-	}
+  "name": "generator-nm-typescript",
+  "version": "6.0.0",
+  "description": "Scaffold out a node module",
+  "license": "MIT",
+  "repository": "rigwild/generator-nm-typescript",
+  "author": {
+    "name": "rigwild",
+    "email": "rigwild@rigwild.dev",
+    "url": "rigwild.dev"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "test": "xo && ava test.js"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "plugin",
+    "boilerplate",
+    "template",
+    "scaffold",
+    "node",
+    "module",
+    "node_module",
+    "node-module",
+    "init",
+    "sindre"
+  ],
+  "dependencies": {
+    "humanize-url": "^2.1.0",
+    "is-scoped": "^2.1.0",
+    "normalize-url": "^4.3.0",
+    "superb": "^4.0.0",
+    "underscore.string": "^3.0.3",
+    "yeoman-generator": "^4.9.0"
+  },
+  "devDependencies": {
+    "ava": "^2.1.0",
+    "pify": "^4.0.1",
+    "xo": "^0.24.0",
+    "yeoman-assert": "^3.0.0",
+    "yeoman-test": "^2.0.0"
+  },
+  "ava": {
+    "failWithoutAssertions": false
+  },
+  "xo": {
+    "ignores": [
+      "app/templates/**"
+    ]
+  }
 }
