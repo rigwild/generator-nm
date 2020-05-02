@@ -1,7 +1,7 @@
 {
 	"name": "my-cool-package-cli",
 	"version": "0.1.0",
-	"description": "My laudable module",
+	"description": "My awesome module",
 	"license": "MIT",
 	"repository": "rigwild/my-cool-package-cli",
 	"author": {

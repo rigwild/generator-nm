@@ -1,4 +1,4 @@
-# generator-nm-typescript [![Build Status](https://travis-ci.org/rigwild/generator-nm-typescript.svg?branch=master)](https://travis-ci.org/rigwild/generator-nm-typescript)
+# generator-nm-typescript [![Node.js CI](https://github.com/rigwild/generator-nm-typescript/workflows/Node.js%20CI/badge.svg)](https://github.com/rigwild/generator-nm-typescript/actions)
 
 > Scaffold out a [node module](https://github.com/sindresorhus/node-module-boilerplate)
 

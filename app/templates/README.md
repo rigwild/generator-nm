@@ -1,5 +1,5 @@
 # <%= repoName %>
-[![Build Status](https://travis-ci.com/<%= githubUsername %>/<%= repoName %>.svg?branch=master)](https://travis-ci.com/<%= githubUsername %>/<%= repoName %>) [![npm package](https://img.shields.io/npm/v/<%= moduleName %>.svg?logo=npm)](https://www.npmjs.com/package/<%= moduleName %>) ![npm downloads](https://img.shields.io/npm/dw/<%= moduleName %>) ![license](https://img.shields.io/npm/l/<%= moduleName %>?color=blue)
+[![Node.js CI](https://github.com/<%= githubUsername %>/<%= repoName %>/workflows/Node.js%20CI/badge.svg)](https://github.com/<%= githubUsername %>/<%= repoName %>/actions) [![npm package](https://img.shields.io/npm/v/<%= moduleName %>.svg?logo=npm)](https://www.npmjs.com/package/<%= moduleName %>) ![npm downloads](https://img.shields.io/npm/dw/<%= moduleName %>) ![license](https://img.shields.io/npm/l/<%= moduleName %>?color=blue)
 
 > <%= moduleDescription %>
 
