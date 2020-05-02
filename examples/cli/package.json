@@ -1,7 +1,7 @@
 {
 	"name": "my-cool-package-cli",
 	"version": "0.1.0",
-	"description": "My fabulous module",
+	"description": "My laudable module",
 	"license": "MIT",
 	"repository": "rigwild/my-cool-package-cli",
 	"author": {
@@ -19,7 +19,7 @@
 		"start": "node dist/cli.js",
 		"build": "tsc",
 		"prepublishOnly": "tsc",
-		"test": "tsc && ava --verbose"
+		"test": "ava --verbose"
 	},
 	"files": [
 		"dist"

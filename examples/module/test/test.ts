@@ -1,6 +1,6 @@
 import test from 'ava'
 import myCoolPackage from '../'
 
-test('title', t => {
+test('main', t => {
 	t.is(myCoolPackage('unicorns'), 'unicorns & rainbows')
 })

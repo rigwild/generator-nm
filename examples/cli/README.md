@@ -1,7 +1,7 @@
 # my-cool-package-cli
 [![Build Status](https://travis-ci.com/rigwild/my-cool-package-cli.svg?branch=master)](https://travis-ci.com/rigwild/my-cool-package-cli) [![npm package](https://img.shields.io/npm/v/my-cool-package-cli.svg?logo=npm)](https://www.npmjs.com/package/my-cool-package-cli) ![npm downloads](https://img.shields.io/npm/dw/my-cool-package-cli) ![license](https://img.shields.io/npm/l/my-cool-package-cli?color=blue)
 
-> My fabulous module
+> My laudable module
 
 ![Screenshot](./screenshot.png)
 

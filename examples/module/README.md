@@ -1,7 +1,7 @@
 # my-cool-package
 [![Build Status](https://travis-ci.com/rigwild/my-cool-package.svg?branch=master)](https://travis-ci.com/rigwild/my-cool-package) [![npm package](https://img.shields.io/npm/v/my-cool-package.svg?logo=npm)](https://www.npmjs.com/package/my-cool-package) ![npm downloads](https://img.shields.io/npm/dw/my-cool-package) ![license](https://img.shields.io/npm/l/my-cool-package?color=blue)
 
-> My glorious module
+> My rad module
 
 ![Screenshot](./screenshot.png)
 

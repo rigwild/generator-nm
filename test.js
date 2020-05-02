@@ -83,7 +83,7 @@ test.serial('prompts for description', async () => {
 	await pify(generator.run.bind(generator))();
 
 	assert.fileContent('package.json', /"description": "foo",/);
-	assert.fileContent('readme.md', /> foo/);
+	assert.fileContent('README.md', /> foo/);
 });
 
 test.serial('defaults to superb description', async () => {
