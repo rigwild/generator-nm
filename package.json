@@ -7,7 +7,7 @@
   "author": {
     "name": "rigwild",
     "email": "rigwild@rigwild.dev",
-    "url": "rigwild.dev"
+    "url": "https://rigwild.dev"
   },
   "engines": {
     "node": ">=8"

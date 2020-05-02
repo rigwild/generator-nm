@@ -21,7 +21,7 @@
 		"start": "node dist/cli.js",<% } %>
 		"build": "tsc",
 		"prepublishOnly": "tsc",
-		"test": "<% if (cli) { %>tsc && <% } %>ava --verbose"
+		"test": "ava --verbose"
 	},
 	"files": [
 		"dist"

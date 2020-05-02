@@ -9,7 +9,7 @@ let generator;
 
 test.beforeEach(async () => {
 	await pify(helpers.testDirectory)(path.join(__dirname, 'temp'));
-	generator = helpers.createGenerator('nm:app', ['../app'], null, {skipInstall: true});
+	generator = helpers.createGenerator('nm-typescript', ['../app'], null, {skipInstall: true});
 });
 
 const commonFiles = [
@@ -17,7 +17,7 @@ const commonFiles = [
 	'.prettierrc.js',
 	'.gitattributes',
 	'.gitignore',
-	'.travis.yml',
+	'.github',
 	'LICENSE',
 	'package.json',
 	'README.md',
