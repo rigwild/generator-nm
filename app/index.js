@@ -72,14 +72,13 @@ module.exports = class extends Generator {
       mv('prettierrc.js', '.prettierrc.js')
       mv('gitattributes', '.gitattributes')
       mv('gitignore', '.gitignore')
-      mv('travis.yml', '.travis.yml')
+      mv('workflows', '.github') // For some reason, moving a directory wraps it in the dir name..
       mv('_package.json', 'package.json')
     })
   }
 
   git() {
     this.spawnCommandSync('git', ['init'])
-    this.spawnCommandSync('rmdir', ['.yo-repository'])
   }
 
   install() {

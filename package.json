@@ -1,13 +1,13 @@
 {
   "name": "generator-nm-typescript",
-  "version": "6.0.1",
+  "version": "6.0.2",
   "description": "Scaffold out a node module",
   "license": "MIT",
   "repository": "rigwild/generator-nm-typescript",
   "author": {
     "name": "rigwild",
     "email": "rigwild@rigwild.dev",
-    "url": "rigwild.dev"
+    "url": "https://rigwild.dev"
   },
   "engines": {
     "node": ">=8"
