@@ -15,4 +15,3 @@ test('main', async t => {
   const { stdout } = await execa(cli)
   t.is(stdout, 'unicorns & rainbows')
 })
-
